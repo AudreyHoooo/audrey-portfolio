@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+    <div class="w-full">
+        <Header />
+        <Hero />
+        <FloatingButton />
+        <Footer />
+    </div>
 </template>
