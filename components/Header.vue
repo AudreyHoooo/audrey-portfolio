@@ -16,7 +16,7 @@
                 <NuxtLink to="/#mobile-ui">Mobile UI</NuxtLink>
             </div>
 
-            <UButton color="black" size="lg" to="#contact" label="CONTACT" />
+            <UButton color="black" size="lg" to="/#contact" label="CONTACT" />
 
             <div class="sm:hidden"></div>
         </UContainer>

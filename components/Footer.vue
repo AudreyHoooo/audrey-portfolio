@@ -1,5 +1,5 @@
 <template>
-    <footer class="w-full">
+    <footer class="w-full" id="contact">
         <UContainer
             class="border-t py-10 w-full flex flex-col sm:flex-row gap-6 sm:justify-between sm:items-center"
         >
