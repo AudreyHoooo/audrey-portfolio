@@ -4,5 +4,8 @@ export default defineAppConfig({
     button: {
       rounded: "rounded-full",
     },
+    container: {
+      padding: "px-6",
+    },
   },
 });

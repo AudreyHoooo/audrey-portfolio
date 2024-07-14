@@ -1,0 +1,58 @@
+[
+  {
+    "type": "graphic",
+    "title": "posters",
+    "subtitle": "Internship",
+    "link": "",
+    "imgUrls": ["/showcase/poster.jpeg"],
+    "description": "Client request: <br/> Strong Visuals to attract target audience."
+  },
+  {
+    "type": "desktop",
+    "title": "Marks & Spencer",
+    "subtitle": "Freelance: Mood design",
+    "link": "",
+    "imgUrls": ["/showcase/m-and-s.jpeg"],
+    "description": "Client request: <br/> Showing a food life vibe and great interaction with users by using graphics."
+  },
+  {
+    "type": "desktop",
+    "title": "System - Dashboard design",
+    "subtitle": "Pikcells Ltd.",
+    "link": "",
+    "imgUrls": ["/showcase/pik-dashboard.jpeg"],
+    "description": "Job request: <br/> Clean and easy-to-read system design."
+  },
+  {
+    "type": "desktop",
+    "title": "Platform UI Kii & Components",
+    "subtitle": "Pikcells Ltd.",
+    "link": "",
+    "imgUrls": ["/showcase/pik-ui-kit-1.jpeg", "/showcase/pik-ui-kit-2.jpeg"],
+    "description": ""
+  },
+  {
+    "type": "mobile",
+    "title": "Wyrmwood Modular-desk",
+    "subtitle": "Pikcells Ltd.",
+    "link": "https://www.wyrmwoodgaming.com/",
+    "imgUrls": ["/showcase/modular-desk.jpeg"],
+    "description": "Job request: <br/> A configurator website for users to cutomise the a modular desk."
+  },
+  {
+    "type": "mobile",
+    "title": "PAN de PAIN",
+    "subtitle": "Freelance",
+    "link": "",
+    "imgUrls": ["/showcase/pan-pain.jpeg"],
+    "description": "Job request: <br/> A mobile app for customers to order.<br/> Easy-to-read styling and match product vibe"
+  },
+  {
+    "type": "mobile",
+    "title": "Day and Knight bedroom planner",
+    "subtitle": "Pikcells Ltd.",
+    "link": "",
+    "imgUrls": ["/showcase/day-and-knight.jpeg"],
+    "description": "Job request: <br/> A mobile website for users to customise the size, layout and style of bedrrom wardrobes."
+  }
+]

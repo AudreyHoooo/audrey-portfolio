@@ -1,6 +1,6 @@
 <template>
-    <div class="w-full py-32">
-        <UContainer class="grid sm:grid-cols-3 gap-4 sm:items-center">
+    <div class="w-full py-20 sm:py-32">
+        <UContainer class="grid sm:grid-cols-3 gap-10 sm:gap-4 sm:items-center">
             <div class="flex flex-col gap-10">
                 <div class="flex items-center gap-2">
                     <NuxtImg
@@ -19,7 +19,7 @@
                     />
                 </div>
 
-                <h1 class="text-2xl font-semibold sm:text-5xl">
+                <h1 class="text-3xl font-semibold sm:text-5xl">
                     I'm a <br />
                     <span class="text-primary-300">UI/UX Designer</span>
                 </h1>
@@ -40,14 +40,14 @@
                 </div>
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-10">
                 <NuxtImg
                     src="/hero-image.jpeg"
                     alt="Hero Image"
-                    class="max-w-xs"
+                    class="max-w-[280px] sm:max-w-xs mx-auto"
                 />
 
-                <div class="flex items-center sm:hidden">
+                <div class="flex justify-between gap-10 items-center sm:hidden">
                     <div class="flex flex-col gap-2">
                         <span class="text-gray-400 text-xs uppercase"
                             >Years of experience</span
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="ml-auto flex flex-col w-full max-w-[250px] gap-6">
+            <div class="sm:ml-auto flex flex-col w-full max-w-[250px] gap-6">
                 <div class="flex flex-col gap-2">
                     <span class="text-gray-400 uppercase">BASED IN</span>
                     <p class="font-medium">Leeds</p>

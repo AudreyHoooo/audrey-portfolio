@@ -3,7 +3,7 @@
         <UButton
             to="/CV"
             download
-            class="fixed bottom-24 right-10 bg-primary-300"
+            class="fixed bottom-5 right-5 sm:bottom-24 sm:right-10 bg-primary-300 z-[60]"
             size="lg"
         >
             <span

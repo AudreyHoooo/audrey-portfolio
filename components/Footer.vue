@@ -6,7 +6,7 @@
             <h3 class="text-xl font-semibold">CONTACT ME</h3>
 
             <div
-                class="flex sm:ml-auto sm:flex-wrap sm:items-center gap-6 sm:gap-20"
+                class="flex flex-col sm:flex-row sm:ml-auto sm:flex-wrap sm:items-center gap-6 sm:gap-20"
             >
                 <div class="flex flex-col gap-2">
                     <span class="text-gray-400 uppercase text-xs"
