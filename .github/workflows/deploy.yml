@@ -1,41 +1,52 @@
-# https://github.com/actions/deploy-pages#usage
 name: Deploy to GitHub Pages
 on:
-  workflow_dispatch:
+  # Runs on pushes targeting the default branch
   push:
     branches:
-      - main
+      - 'main'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Add write workflow permissions
+permissions:
+  contents: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  # Build job
+  build-and-deploy:
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: .
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20]
+
     steps:
-      - uses: actions/checkout@v3
-      - run: corepack enable
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - uses: actions/setup-node@v3
         with:
-          node-version: '20'
-      # Pick your own package manager and build script
-      - run: npm install
-      - run: npx nuxt build --preset github_pages
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+          version: ${{ matrix.node }}
+          cache: ${{ steps.pkgman.outputs.cache }}
+
+      - name: Install dependencies
+        run: ${{ steps.pkgman.outputs.package_manager }} install
+
+      - name: Generate
+        run: npx nuxi build --preset github_pages
+
+      # Deployment job
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          path: ./.output/public
-  # Deployment job
-  deploy:
-    # Add a dependency to the build job
-    needs: build
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-    # Deploy to the github_pages environment
-    environment:
-      name: github_pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          folder: ./.output/public
