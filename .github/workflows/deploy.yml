@@ -1,5 +1,9 @@
 # https://github.com/actions/deploy-pages#usage
 name: Deploy to GitHub Pages
+
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   push:
