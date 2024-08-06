@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui', '@nuxt/content', '@nuxt/image', '@nuxt/fonts'],
-
+  ssr: false,
   app: {
     head: {
       htmlAttrs: {
