@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  colorMode: {
+    preference: 'light',
+  },
 
   router: {
     options: {
