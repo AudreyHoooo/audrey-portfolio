@@ -70,13 +70,12 @@ jobs:
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-
-      - name: Build
-        run: npx nuxt build --preset github_pages
+      - name: Generate
+        run: npx nuxi build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/public
+          folder: ./.output/public
 
   # Deployment job
   deploy:
